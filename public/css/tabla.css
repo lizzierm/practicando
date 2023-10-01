@@ -1,0 +1,59 @@
+.table {
+
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    /* borde de la tabla */
+    position: relative;
+    /* padding: 8px; */
+    padding: 12px 15px;
+    border: 1px solid #d1cece;
+    /* los textos indroducidos */
+    text-align: center;
+    /* tamaño de letras */
+    font-size: 16px;
+}
+
+.table th {
+    /* cambiar el color de las letras y tabla inicial de tituls */
+    background-color: #314dee;
+    color: #fdfbfb;
+}
+/* color de la ID */
+.table tbody {
+    background-color: #f8f5f5;
+}
+
+/* Tabla responsive */
+@media (max-width: 500px) {
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 8px;
+        width: 50%;
+        padding-left: 18px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+}
